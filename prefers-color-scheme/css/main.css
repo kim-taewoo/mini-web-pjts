@@ -1,0 +1,80 @@
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  color: var(--color);
+  background-color: var(--background-color);
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  font-family: 'Nunito';
+  transition: background-color, color 1s;
+}
+
+input[type='checkbox'] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 200px;
+  height: 100px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #bada55;
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 130px;
+}
+
+.container {
+  width: 80%;
+  background: var(--panel-bg);
+  border-radius: 10px;
+  padding: 4em;
+}
+
+.container h1 {
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  h1:after {
+    content: 'Dark';
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  h1:after {
+    content: 'Light';
+  }
+}

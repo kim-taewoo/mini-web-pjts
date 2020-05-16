@@ -1,0 +1,10 @@
+:root {
+  --color: rgb(238, 238, 238);
+  --background-color: rgb(19, 19, 19);
+  --panel-bg: rgb(25, 25, 25);
+
+  --link-color: rgb(0, 188, 212);
+  --main-headline-color: rgb(233, 30, 99);
+  --accent-background-color: rgb(0, 188, 212);
+  --accent-color: rgb(5, 5, 5);
+}
